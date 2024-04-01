@@ -1,36 +1,44 @@
-input[type=text]{
+input[type=text] {
   appearance: none;
   border-bottom: .2em solid #1E90FF;
   background: #1E90FF;
-	border-radius: .2em .2em 0 0;
-	padding: .4em;
-	color: #ffffff;
+  border-radius: .2em .2em 0 0;
+  padding: .4em;
+  color: #ffffff;
 }
 
-button{
+button {
   appearance: none;
-	border: .2em solid #1E90FF;
-	background: hsl(0 0 0/0);
-	padding: .35em 1.75em;
-	color: #1E90FF;
-	border-radius: 2em;
-	transition: 1s;
-	&:hover, &:focus, &:active {
-		background: #1E90FF;
-		color: #fff;
-	}
+  border: .2em solid #1E90FF;
+  background: hsl(0 0 0/0);
+  padding: .35em 1.75em;
+  color: #1E90FF;
+  border-radius: 2em;
+  transition: 1s;
 
+  &:hover, &:focus, &:active {
+    background: #1E90FF;
+    color: #fff;
+  }
 }
 
 .search-container {
   width: 13.5%;
   position: absolute;
-	top: 2.5%;
+  top: 2.5%;
   left: 50%;
   transform: translate(-50%, 0%);
   z-index: 1;
+
+  @media (max-width: 768px) {
+    width: 20%;
+  }
+
+  @media (max-width: 576px) {
+    width: 30%;
+  }
 }
 
-.marker-icon:hover{
-	cursor: default;
+.marker-icon:hover {
+  cursor: default;
 }

@@ -1,0 +1,72 @@
+// Default styles
+.menuIcon {
+  position: absolute;
+  top: 2.5%;
+  left: 6.35%;
+  z-index: 4;
+  transition: top left 0.3s ease-in-out;
+}
+
+img {
+  width: 7.5%;
+  height: auto;
+  cursor: pointer;
+}
+
+.filter-container {
+  position: absolute;
+  top: calc(2.5% + 50px);
+  left: 7%;
+  width: 20em;
+  background-color: #ffffff4f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: left 0.3s ease-in-out;
+  z-index: 1;
+
+  &.open {
+    left: 0;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 0.2em solid #1E90FF;
+    background: #ffffff;
+    border-radius: 0.2em;
+    padding: 0.4em;
+    color: #ffffff;
+    margin-right: 0.5em;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:checked {
+    background: #1E90FF;
+    color: #fff;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    left: 2%;
+  }
+
+  .filter-container {
+    left: 25%;
+  }
+}
+
+@media (max-width: 576px) {
+  .menuIcon {
+    top: 1%;
+    left: 2%;
+  }
+
+  .filter-container {
+    left: 10%;
+  }
+}
